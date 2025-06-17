@@ -9,7 +9,7 @@ export default function Footer() {
         <div className={styles.content}>
           <div className={styles.logoSection}>
             <Link href="/" className={styles.logo}>
-              MySite
+              Senthilkumar K
             </Link>
             <p className={styles.tagline}>Building digital experiences</p>
           </div>
