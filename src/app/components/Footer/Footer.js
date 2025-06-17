@@ -16,10 +16,10 @@ export default function Footer() {
 
           <div className={styles.links}>
             <h3 className={styles.linksTitle}>Quick Links</h3>
-            <Link href="/about" className={styles.link}>About</Link>
-            <Link href="/services" className={styles.link}>Services</Link>
-            <Link href="/blog" className={styles.link}>Blog</Link>
-            <Link href="/contact" className={styles.link}>Contact</Link>
+            <Link href="/pages/About" className={styles.link}>About</Link>
+            <Link href="/pages/Services" className={styles.link}>Services</Link>
+            <Link href="/pages/Blog" className={styles.link}>Blog</Link>
+            <Link href="/pages/Contact" className={styles.link}>Contact</Link>
           </div>
 
           <div className={styles.social}>
