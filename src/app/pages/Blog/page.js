@@ -6,75 +6,75 @@ import Image from "next/image";
 export default function page() {
   const featuredPosts = [
     {
-      title: "WinForms to WinUI3 Migration Guide",
-      excerpt: "Step-by-step guide to modernizing your desktop applications with the latest Windows UI framework",
+      title: "Clean Architecture for Mobile Apps",
+      excerpt: "Implementing clean architecture principles in Flutter and React Native applications",
       category: "Architecture",
-      date: "May 15, 2023",
-      readTime: "8 min read",
+      date: "June 10, 2023",
+      readTime: "9 min read",
       image: "/images/WinForms.jpg",
-      slug: "winforms-to-winui3-migration"
+      slug: "clean-architecture-mobile"
     },
     {
-      title: "Top 5 Mobile Architecture Mistakes",
-      excerpt: "Common pitfalls in mobile app development and how to avoid them in your projects",
+      title: "From .NET Dev to Architect",
+      excerpt: "My personal roadmap for transitioning from developer to solution architect",
+      category: "Career",
+      date: "May 28, 2023",
+      readTime: "7 min read",
+      image: "/images/WinForms.jpg",
+      slug: "dotnet-to-architect"
+    },
+    {
+      title: "Server-Driven UI Explained",
+      excerpt: "How we reduced app store submissions by 80% with server-driven UI",
       category: "Mobile",
-      date: "April 28, 2023",
+      date: "May 15, 2023",
       readTime: "6 min read",
       image: "/images/WinForms.jpg",
-      slug: "mobile-architecture-mistakes"
-    },
-    {
-      title: "How I Grew as a Tech Mentor",
-      excerpt: "My personal journey from individual contributor to mentoring dozens of developers",
-      category: "Career",
-      date: "March 10, 2023",
-      readTime: "5 min read",
-      image:"/images/WinForms.jpg",
-      slug: "tech-mentor-growth"
+      slug: "server-driven-ui"
     }
   ];
 
   const recentPosts = [
     {
-      title: "SOLID Principles in Modern .NET",
-      excerpt: "Applying time-tested principles to contemporary .NET development",
-      category: "Development",
-      date: "June 2, 2023",
-      readTime: "7 min read",
-      slug: "solid-principles-dotnet"
+      title: "My CTO Transition Plan",
+      excerpt: "Preparing for executive leadership in tech organizations",
+      category: "Career",
+      date: "June 5, 2023",
+      readTime: "8 min read",
+      slug: "cto-transition-plan"
     },
     {
-      title: "Building Resilient Microservices",
-      excerpt: "Patterns for creating fault-tolerant distributed systems",
-      category: "Architecture",
+      title: "Cloud Cost Optimization Patterns",
+      excerpt: "Architectural patterns that reduced our AWS bill by 40%",
+      category: "Cloud",
       date: "May 22, 2023",
       readTime: "10 min read",
-      slug: "resilient-microservices"
+      slug: "cloud-cost-optimization"
     },
     {
-      title: "Interviewing for Architect Roles",
-      excerpt: "How to prepare and what hiring managers really look for",
-      category: "Career",
-      date: "May 5, 2023",
-      readTime: "6 min read",
-      slug: "architect-interviews"
-    },
-    {
-      title: "Flutter vs React Native in 2023",
-      excerpt: "Updated comparison of cross-platform frameworks",
+      title: "Flutter State Management 2023",
+      excerpt: "Comparing Riverpod, Bloc, and Provider for large-scale apps",
       category: "Mobile",
-      date: "April 15, 2023",
-      readTime: "9 min read",
-      slug: "flutter-react-native-2023"
+      date: "May 10, 2023",
+      readTime: "12 min read",
+      slug: "flutter-state-management"
+    },
+    {
+      title: "Architecting for Scale",
+      excerpt: "Lessons from building systems that handle 10x traffic spikes",
+      category: "Architecture",
+      date: "April 28, 2023",
+      readTime: "15 min read",
+      slug: "architecting-for-scale"
     }
   ];
 
   const categories = [
-    { name: "Architecture", count: 12 },
-    { name: "Mobile", count: 8 },
-    { name: "Career", count: 10 },
-    { name: "Development", count: 15 },
-    { name: "Cloud", count: 7 }
+    { name: "Architecture", count: 15 },
+    { name: "Cloud", count: 9 },
+    { name: "Mobile", count: 12 },
+    { name: "Career Advice", count: 11 },
+    { name: "Leadership", count: 5 }
   ];
 
   return (
@@ -82,9 +82,9 @@ export default function page() {
       {/* Hero Section */}
       <section className={styles.hero}>
         <div className={styles.container}>
-          <h1 className={styles.title}>Tech Blog</h1>
+          <h1 className={styles.title}>Tech Architecture Blog</h1>
           <p className={styles.subtitle}>
-            Insights on architecture, mobile development, and career growth from 20+ years in tech
+            Practical insights on software architecture, mobile development, and tech career growth
           </p>
           <div className={styles.ctaWrapper}>
             <a href="#featured" className={styles.ctaButton}>
@@ -177,7 +177,7 @@ export default function page() {
                 <ul className={styles.categoryList}>
                   {categories.map((category, index) => (
                     <li key={index} className={styles.categoryItem}>
-                      <a href={`/blog/category/${category.name.toLowerCase()}`}>
+                      <a href={`/blog/category/${category.name.toLowerCase().replace(' ', '-')}`}>
                         {category.name} <span className={styles.categoryCount}>({category.count})</span>
                       </a>
                     </li>
@@ -186,9 +186,9 @@ export default function page() {
               </div>
 
               <div className={styles.sidebarWidget}>
-                <h3 className={styles.widgetTitle}>Newsletter</h3>
+                <h3 className={styles.widgetTitle}>Architect's Digest</h3>
                 <p className={styles.widgetText}>
-                  Get the latest posts delivered to your inbox
+                  Get monthly architecture insights and career advice
                 </p>
                 <form className={styles.newsletterForm}>
                   <input

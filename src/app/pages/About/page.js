@@ -5,79 +5,49 @@ import {
   FaChartLine,
   FaCode,
   FaGraduationCap,
+  FaCloud,
+  FaMobile,
+  FaCogs,
 } from "react-icons/fa";
 import styles from "./About.module.scss";
 import Image from "next/image";
 
 export default function page() {
-  const timeline = [
-    {
-      year: "2000-2005",
-      title: "WinForms Developer",
-      description: "Built desktop applications for enterprise clients",
-      icon: <FaCode />,
-    },
-    {
-      year: "2005-2010",
-      title: "ASP.NET Specialist",
-      description: "Developed web applications and services",
-      icon: <FaCode />,
-    },
-    {
-      year: "2010-2015",
-      title: "Mobile Developer (Xamarin)",
-      description: "Created cross-platform mobile solutions",
-      icon: <FaCode />,
-    },
-    {
-      year: "2015-2020",
-      title: "Cloud Architect",
-      description: "Designed cloud-native solutions on Azure/AWS",
-      icon: <FaChartLine />,
-    },
-    {
-      year: "2020-Present",
-      title: "Solution Architect & Educator",
-      description: "Mentoring developers and building SaaS products",
-      icon: <FaUserTie />,
-    },
-  ];
-
   return (
     <div className={styles.about}>
       {/* Hero Section */}
       <section className={styles.hero}>
         <div className={styles.heroContainer}>
           <div className={styles.heroContent}>
-          <div className={styles.profileImageContent}>
-            <div className={styles.profileImage}>
-              <Image 
-                src="/images/profile.jpg"
-                alt="Profile picture"
-                width={400}
-                height={400}
-                priority
-                className={styles.image}
-              />
-            </div>
+            <div className={styles.profileImageContent}>
+              <div className={styles.profileImage}>
+                <Image 
+                  src="/images/profile.jpg"
+                  alt="Profile picture"
+                  width={400}
+                  height={400}
+                  priority
+                  className={styles.image}
+                />
+              </div>
             </div>
             <div className={styles.heroText}>
               <h1 className={styles.tagline}>
-                <span className={styles.highlight}>20+ Years</span> Shaping
+                <span className={styles.highlight}>Solution Architect</span> with
                 <br />
-                Technology Solutions
+                20+ Years of Experience
               </h1>
               <p className={styles.intro}>
-                From WinForms to Cloud Architecture
+                From .NET & SQL Server to Cloud-Native Development
                 <br />
-                Helping developers bridge the gap between code and architecture
+                Leading mobile-first solutions with Flutter, React Native & MAUI
               </p>
 
               <div className={styles.missionStatement}>
                 <FaLightbulb className={styles.missionIcon} />
                 <p>
-                  My mission is to empower developers to become architects and
-                  create meaningful software that solves real problems.
+                  Passionate about mentoring developers, creating educational content (8.6K+ YouTube subscribers),
+                  and working toward launching my own software company and training institute.
                 </p>
               </div>
             </div>
@@ -85,32 +55,96 @@ export default function page() {
         </div>
       </section>
 
-      {/* Timeline Section */}
-      <section className={styles.timelineSection}>
+      {/* Work Experience Section */}
+      <section className={styles.experienceSection}>
         <div className={styles.container}>
-          <h2 className={styles.sectionTitle}>My Journey</h2>
+          <h2 className={styles.sectionTitle}>Work Experience</h2>
           <p className={styles.sectionSubtitle}>
-            From junior developer to solution architect
+            Building enterprise-grade solutions across multiple platforms
           </p>
 
-          <div className={styles.timeline}>
-            {timeline.map((item, index) => (
-              <div
-                key={index}
-                className={`${styles.timelineItem} ${
-                  index % 2 === 0 ? styles.left : styles.right
-                }`}
-              >
-                <div className={styles.timelineContent}>
-                  <div className={styles.timelineIcon}>{item.icon}</div>
-                  <div className={styles.timelineYear}>{item.year}</div>
-                  <h3 className={styles.timelineTitle}>{item.title}</h3>
-                  <p className={styles.timelineDescription}>
-                    {item.description}
-                  </p>
-                </div>
+          <div className={styles.experienceGrid}>
+            <div className={styles.experienceCard}>
+              <div className={styles.cardIcon}>
+                <FaUserTie className={styles.icon} />
               </div>
-            ))}
+              <h3 className={styles.cardTitle}>Solution Architect</h3>
+              <p className={styles.cardText}>
+                Leading mobile-first cloud-native development using React Native, Flutter, Azure, and AWS. 
+                Designing scalable architectures for enterprise applications.
+              </p>
+            </div>
+
+            <div className={styles.experienceCard}>
+              <div className={styles.cardIcon}>
+                <FaCode className={styles.icon} />
+              </div>
+              <h3 className={styles.cardTitle}>Senior .NET Developer</h3>
+              <p className={styles.cardText}>
+                Built robust desktop and web applications using WinForms, ASP.NET, and SQL Server. 
+                Developed internal tools and reporting applications for enterprise clients.
+              </p>
+            </div>
+
+            <div className={styles.experienceCard}>
+              <div className={styles.cardIcon}>
+                <FaMobile className={styles.icon} />
+              </div>
+              <h3 className={styles.cardTitle}>Mobile Tech Lead</h3>
+              <p className={styles.cardText}>
+                Led cross-platform mobile development using Xamarin and MAUI. 
+                Built mobile-cloud systems and cross-platform solutions.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Tech Stack Section */}
+      <section className={styles.techSection}>
+        <div className={styles.container}>
+          <h2 className={styles.sectionTitle}>Tech Stack & Skills</h2>
+          
+          <div className={styles.techGrid}>
+            <div className={styles.techCategory}>
+              <div className={styles.techIcon}>
+                <FaCode />
+              </div>
+              <h3>Languages</h3>
+              <p>C#, Python, JavaScript, Dart, Kotlin, Swift</p>
+            </div>
+
+            <div className={styles.techCategory}>
+              <div className={styles.techIcon}>
+                <FaCogs />
+              </div>
+              <h3>Frameworks</h3>
+              <p>.NET Core, React Native, Flutter, MAUI</p>
+            </div>
+
+            <div className={styles.techCategory}>
+              <div className={styles.techIcon}>
+                <FaCloud />
+              </div>
+              <h3>Cloud & DevOps</h3>
+              <p>Azure, AWS, GitHub Actions, Azure DevOps, OpenShift</p>
+            </div>
+
+            <div className={styles.techCategory}>
+              <div className={styles.techIcon}>
+                <FaChartLine />
+              </div>
+              <h3>Architecture</h3>
+              <p>Microservices, Clean Architecture, Event-Driven</p>
+            </div>
+
+            <div className={styles.techCategory}>
+              <div className={styles.techIcon}>
+                <FaLightbulb />
+              </div>
+              <h3>AI/ML</h3>
+              <p>GenAI, MLOps, Python ML libraries</p>
+            </div>
           </div>
         </div>
       </section>

@@ -8,7 +8,7 @@ import {
   FaChartLine,
   FaLightbulb,
 } from "react-icons/fa";
-// import { SiMicrosoftazure, SiDotnet, SiReact, SiFlutter, SiAmazonaws, SiNextdotjs } from 'react-icons/si';
+
 import styles from "./Home.module.scss";
 import Image from "next/image";
 import profileImage from '../../public/images/profile.jpg';
@@ -45,42 +45,38 @@ export default function Home() {
             </div>
 
             <div className={styles.heroText}>
-              <h1 className={styles.tagline}>
-                <span className={styles.highlight}>Architecting</span> Tech
-                Careers.
-                <br />
-                <span className={styles.highlight}>Building</span> Future
-                Leaders
-              </h1>
-              <p className={styles.intro}>
-                Solution Architect | Tech Educator | SaaS Builder
-                <br />
-                20+ years transforming ideas into scalable digital solutions
-              </p>
+  <h1 className={styles.tagline}>
+    <span className={styles.highlight}>Senthilkumar K</span>
+  </h1>
+  <p className={styles.intro}>
+    Solution Architect | Cloud & Mobility | YouTuber | Tech Mentor | Future CTO
+    <br />
+    Building scalable solutions and empowering future developers
+  </p>
 
-              <div className={styles.ctaButtons}>
-                <a
-                  href="/projects"
-                  className={`${styles.button} ${styles.primary}`}
-                >
-                  <FaArrowRight className={styles.icon} /> View My Work
-                </a>
-                <a
-                  href="https://youtube.com/yourchannel"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`${styles.button} ${styles.secondary}`}
-                >
-                  <FaPlay className={styles.icon} /> Watch on YouTube
-                </a>
-                <a
-                  href="/mentorship"
-                  className={`${styles.button} ${styles.tertiary}`}
-                >
-                  <FaUserGraduate className={styles.icon} /> Join Mentorship
-                </a>
-              </div>
-            </div>
+  <div className={styles.ctaButtons}>
+    <a
+      href="/projects"
+      className={`${styles.button} ${styles.primary}`}
+    >
+      <FaArrowRight className={styles.icon} /> Explore My Projects
+    </a>
+    <a
+      href="https://youtube.com/yourchannel"
+      target="_blank"
+      rel="noopener noreferrer"
+      className={`${styles.button} ${styles.secondary}`}
+    >
+      <FaPlay className={styles.icon} /> Watch on YouTube
+    </a>
+    <a
+      href="/mentorship"
+      className={`${styles.button} ${styles.tertiary}`}
+    >
+      <FaUserGraduate className={styles.icon} /> Book a Mentorship Call
+    </a>
+  </div>
+</div>
           </div>
 
           <div className={styles.techStack}>

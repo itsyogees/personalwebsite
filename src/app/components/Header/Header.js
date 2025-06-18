@@ -15,7 +15,11 @@ export default function Header() {
     <header className={styles.header}>
       <div className={styles.container}>
         <Link href="/" className={styles.logo}>
+<<<<<<< HEAD
          Senthilkumar K
+=======
+        Senthilkumar K
+>>>>>>> cd62c79 (web)
         </Link>
 
         <button 
@@ -34,12 +38,19 @@ export default function Header() {
           <Link href="/pages/Services" className={styles.link} onClick={closeMenu}>
             Services
           </Link>
+          <Link href="/pages/YoutubePage" className={styles.link} onClick={closeMenu}>
+          Youtube
+          </Link>
           <Link href="/pages/Blog" className={styles.link} onClick={closeMenu}>
             Blog
+          </Link>
+          <Link href="/pages/ProjectsPage" className={styles.link} onClick={closeMenu}>
+          Projects
           </Link>
           <Link href="/pages/Contact" className={styles.link} onClick={closeMenu}>
             Contact
           </Link>
+
         </nav>
 
      

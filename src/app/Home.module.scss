@@ -1,22 +1,24 @@
 // Home.module.scss
 
 .home {
-    font-family: "Inter", sans-serif;
-    color: #333;
-    line-height: 1.6;
+  background-color: #f8fafc;
   }
   
   // Hero Section
   .hero {
-    background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
+    background: linear-gradient(135deg, #f0f4f9 0%, #e6ecf2 100%);
     padding: 4rem 0;
     margin-top: 4rem;
     position: relative;
     overflow: hidden;
   
     &Container {
+<<<<<<< HEAD
       width: 90%;
      
+=======
+      width: 90%; 
+>>>>>>> cd62c79 (web)
       margin: 0 auto;
       display: flex;
       flex-direction: column;
@@ -222,7 +224,7 @@
     background-color: white;
   
     .container {
-      max-width: 1200px;
+     width: 90%;
       margin: 0 auto;
     }
   
@@ -299,7 +301,7 @@
     background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
   
     .container {
-      max-width: 1200px;
+     width: 90%;
       margin: 0 auto;
     }
   
